@@ -9,6 +9,9 @@
         <dependent-module archiveName="CliniqueMavenDAO-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CliniqueMavenDAO/CliniqueMavenDAO">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="CliniqueMavenBO-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CliniqueMavenBO/CliniqueMavenBO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="CliniqueMavenPRESENTATION"/>
         <property name="java-output-path" value="/CliniqueMavenPRESENTATION/target/classes"/>
     </wb-module>

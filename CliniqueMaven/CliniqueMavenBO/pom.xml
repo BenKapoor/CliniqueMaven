@@ -8,7 +8,7 @@
   </parent>
 
   <groupId>eu.ensup</groupId>
-  <artifactId>CliniqueServiceBO</artifactId>
+  <artifactId>CliniqueMavenBO</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <name>CliniqueServiceBO</name>
