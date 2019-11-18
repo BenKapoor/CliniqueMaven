@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 18 nov. 2019 à 10:02
+-- Généré le :  lun. 18 nov. 2019 à 12:07
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -19,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `projetconsultation`
+-- Base de données :  `cliniquemaven`
 --
+CREATE DATABASE IF NOT EXISTS `cliniquemaven` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `cliniquemaven`;
 
 -- --------------------------------------------------------
 
@@ -34,8 +36,8 @@ CREATE TABLE IF NOT EXISTS `medecin` (
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `adresse` varchar(255) NOT NULL,
-  `disponibilite` varchar(50) NOT NULL,
   `sexe` tinyint(1) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `specialite` varchar(255) NOT NULL,
   `idPatient` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -46,13 +48,13 @@ CREATE TABLE IF NOT EXISTS `medecin` (
 -- Déchargement des données de la table `medecin`
 --
 
-INSERT INTO `medecin` (`id`, `nom`, `prenom`, `adresse`, `disponibilite`, `sexe`, `specialite`, `idPatient`) VALUES
-(1, 'Dr', 'Tournesol', '15 rue de Bernard de la Vilardière', '0', 0, '', 1),
-(2, 'Dr', 'Alban', 'Rue de la pompe', 'oui', 0, '', NULL),
-(3, 'Dr', 'Alban', 'Rue de la pompe', 'oui', 0, '', NULL),
-(4, 'Dr', 'Alban', 'Rue de la pompe', 'oui', 0, '', NULL),
-(5, 'Dr', 'Alban', 'Rue de la pompe', 'oui', 0, '', NULL),
-(6, 'Dr', 'Alban', 'Rue de la pompe', 'oui', 0, '', NULL);
+INSERT INTO `medecin` (`id`, `nom`, `prenom`, `adresse`, `sexe`, `email`, `specialite`, `idPatient`) VALUES
+(1, 'Dr', 'Tournesol', '15 rue de Bernard de la Vilardière', 0, '', '', 1),
+(2, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
+(3, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
+(4, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
+(5, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
+(6, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -63,11 +65,11 @@ INSERT INTO `medecin` (`id`, `nom`, `prenom`, `adresse`, `disponibilite`, `sexe`
 DROP TABLE IF EXISTS `patient`;
 CREATE TABLE IF NOT EXISTS `patient` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
-  `symptome` varchar(255) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `adresse` varchar(255) NOT NULL,
   `sexe` tinyint(1) NOT NULL,
+  `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -75,8 +77,8 @@ CREATE TABLE IF NOT EXISTS `patient` (
 -- Déchargement des données de la table `patient`
 --
 
-INSERT INTO `patient` (`id`, `symptome`, `nom`, `prenom`, `adresse`, `sexe`) VALUES
-(1, 'Fièvre', 'Jean', 'Marc', '13 rue de la bière', 0);
+INSERT INTO `patient` (`id`, `nom`, `prenom`, `adresse`, `sexe`, `email`) VALUES
+(1, 'Jean', 'Marc', '13 rue de la bière', 0, '');
 
 --
 -- Contraintes pour les tables déchargées
