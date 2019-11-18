@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 18 nov. 2019 à 12:07
+-- Généré le :  lun. 18 nov. 2019 à 13:20
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `medecin` (
   `adresse` varchar(255) NOT NULL,
   `sexe` tinyint(1) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `specialite` varchar(255) NOT NULL,
   `idPatient` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -48,13 +49,13 @@ CREATE TABLE IF NOT EXISTS `medecin` (
 -- Déchargement des données de la table `medecin`
 --
 
-INSERT INTO `medecin` (`id`, `nom`, `prenom`, `adresse`, `sexe`, `email`, `specialite`, `idPatient`) VALUES
-(1, 'Dr', 'Tournesol', '15 rue de Bernard de la Vilardière', 0, '', '', 1),
-(2, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
-(3, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
-(4, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
-(5, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL),
-(6, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', NULL);
+INSERT INTO `medecin` (`id`, `nom`, `prenom`, `adresse`, `sexe`, `email`, `password`, `specialite`, `idPatient`) VALUES
+(1, 'Dr', 'Tournesol', '15 rue de Bernard de la Vilardière', 0, '', '', '', 1),
+(2, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', '', NULL),
+(3, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', '', NULL),
+(4, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', '', NULL),
+(5, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', '', NULL),
+(6, 'Dr', 'Alban', 'Rue de la pompe', 0, '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -70,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `patient` (
   `adresse` varchar(255) NOT NULL,
   `sexe` tinyint(1) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -77,8 +79,8 @@ CREATE TABLE IF NOT EXISTS `patient` (
 -- Déchargement des données de la table `patient`
 --
 
-INSERT INTO `patient` (`id`, `nom`, `prenom`, `adresse`, `sexe`, `email`) VALUES
-(1, 'Jean', 'Marc', '13 rue de la bière', 0, '');
+INSERT INTO `patient` (`id`, `nom`, `prenom`, `adresse`, `sexe`, `email`, `password`) VALUES
+(1, 'Jean', 'Marc', '13 rue de la bière', 0, '', '');
 
 --
 -- Contraintes pour les tables déchargées
