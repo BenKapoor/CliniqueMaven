@@ -1,17 +1,30 @@
-<%-- 
-    Document   : Authentification
-    Created on : 18 nov. 2019, 14:29:55
-    Author     : lorris
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="utf-8" />
+        <title>Authentification</title>
+        <link type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form method="post" action="authentification">
+	    <fieldset>
+                <legend>Authentification</legend>
+                <p>Vous pouvez vous authentifier via ce formulaire.</p>
+
+                <label for="email">Adresse email <span class="requis">*</span></label>
+                <input type="email" id="email" name="email" value="" size="20" maxlength="60" />
+                <span class="erreur">${erreurs['email']}</span>
+                <br />
+
+                <label for="password">Mot de passe <span class="requis">*</span></label>
+                <input type="password" id="password" name="password" value="" size="20" maxlength="20" />
+                <span class="erreur">${erreurs['password']}</span>
+                <br />
+
+                <input type="submit" value="Authentification" class="sansLabel" />
+                <br />
+            </fieldset>
+        </form>
     </body>
 </html>
