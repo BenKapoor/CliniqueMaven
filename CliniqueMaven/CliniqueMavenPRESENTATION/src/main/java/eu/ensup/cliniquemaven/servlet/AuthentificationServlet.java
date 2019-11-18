@@ -20,7 +20,7 @@ public class AuthentificationServlet extends HttpServlet {
 	public static final String CHAMP_PASS = "password";
 	public static final String ATT_ERREURS = "erreurs";
 	public static final String ATT_RESULTAT = "resultat";
-	public static final String VUE = "/WEB-INF/Authentification/Authentification.jsp";
+	public static final String VUE = "/WEB-INF/Authentification.jsp";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
