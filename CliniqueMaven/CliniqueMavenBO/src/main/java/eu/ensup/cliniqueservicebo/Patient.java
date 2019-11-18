@@ -22,13 +22,12 @@ public class Patient extends Personne {
 	 * @param nom
 	 * @param prenom
 	 * @param adresse
-	 * @param symptome
-	 * @param medecin
+	 * @param sexe
+	 * @param email
 	 */
-	public Patient(int id, String nom, String prenom, String adresse, String symptome, Medecin medecin) {
-		super(id, nom, prenom, adresse);
-		this.symptome = symptome;
-		this.medecin = medecin;
+	public Patient(int id, String nom, String prenom, String adresse, Boolean sexe, String email) {
+		super(id, nom, prenom, adresse, sexe, email);
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -42,11 +41,11 @@ public class Patient extends Personne {
 	}
 
 	public Medecin getMedecin() {
-		return this.medecin;
+		return medecin;
 	}
 
 	public String getSymptome() {
-		return this.symptome;
+		return symptome;
 	}
 
 	public void setMedecin(Medecin medecin) {
@@ -57,8 +56,4 @@ public class Patient extends Personne {
 		this.symptome = symptome;
 	}
 
-	@Override
-	public String toString() {
-		return "Patient [symptome=" + this.symptome + ", medecin=" + this.medecin + "]";
-	}
 }

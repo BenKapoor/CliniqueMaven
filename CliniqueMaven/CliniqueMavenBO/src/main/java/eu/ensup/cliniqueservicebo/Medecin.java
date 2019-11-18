@@ -10,13 +10,11 @@ package eu.ensup.cliniqueservicebo;
 public class Medecin extends Personne {
 
 	private String disponibilite;
+	private String specialite;
 	private Patient patient;
 
-	/**
-	 *
-	 */
 	public Medecin() {
-		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -24,11 +22,11 @@ public class Medecin extends Personne {
 	 * @param nom
 	 * @param prenom
 	 * @param adresse
-	 * @param disponibilite
+	 * @param sexe
+	 * @param email
 	 */
-	public Medecin(int id, String nom, String prenom, String adresse, String disponibilite) {
-		super(id, nom, prenom, adresse);
-		this.disponibilite = disponibilite;
+	public Medecin(int id, String nom, String prenom, String adresse, Boolean sexe, String email) {
+		super(id, nom, prenom, adresse, sexe, email);
 	}
 
 	/**
@@ -36,31 +34,30 @@ public class Medecin extends Personne {
 	 * @param nom
 	 * @param prenom
 	 * @param adresse
+	 * @param sexe
+	 * @param email
 	 * @param disponibilite
+	 * @param specialite
 	 * @param patient
 	 */
-	public Medecin(int id, String nom, String prenom, String adresse, String disponibilite, Patient patient) {
-		super(id, nom, prenom, adresse);
+	public Medecin(int id, String nom, String prenom, String adresse, Boolean sexe, String email, String disponibilite,
+			String specialite, Patient patient) {
+		super(id, nom, prenom, adresse, sexe, email);
 		this.disponibilite = disponibilite;
-		this.patient = patient;
-	}
-
-	/**
-	 * @param disponibilite
-	 * @param patient
-	 */
-	public Medecin(String disponibilite, Patient patient) {
-		super();
-		this.disponibilite = disponibilite;
+		this.specialite = specialite;
 		this.patient = patient;
 	}
 
 	public String getDisponibilite() {
-		return this.disponibilite;
+		return disponibilite;
 	}
 
 	public Patient getPatient() {
-		return this.patient;
+		return patient;
+	}
+
+	public String getSpecialite() {
+		return specialite;
 	}
 
 	public void setDisponibilite(String disponibilite) {
@@ -71,11 +68,13 @@ public class Medecin extends Personne {
 		this.patient = patient;
 	}
 
+	public void setSpecialite(String specialite) {
+		this.specialite = specialite;
+	}
+
 	@Override
 	public String toString() {
-		return "Medecin [disponibilite=" + this.disponibilite + ", patient=" + this.patient + ", getAdresse()="
-				+ this.getAdresse() + ", getId()=" + this.getId() + ", getNom()=" + this.getNom() + ", getPrenom()="
-				+ this.getPrenom() + "]";
+		return "Medecin [disponibilite=" + disponibilite + ", specialite=" + specialite + ", patient=" + patient + "]";
 	}
 
 }

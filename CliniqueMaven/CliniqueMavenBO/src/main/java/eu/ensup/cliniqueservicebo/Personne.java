@@ -11,6 +11,8 @@ public class Personne {
 	private String nom;
 	private String prenom;
 	private String adresse;
+	private Boolean sexe;
+	private String email;
 
 	/**
 	 *
@@ -24,33 +26,49 @@ public class Personne {
 	 * @param nom
 	 * @param prenom
 	 * @param adresse
+	 * @param sexe
+	 * @param email
 	 */
-	public Personne(int id, String nom, String prenom, String adresse) {
+	public Personne(int id, String nom, String prenom, String adresse, Boolean sexe, String email) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.adresse = adresse;
+		this.sexe = sexe;
+		this.email = email;
 	}
 
 	public String getAdresse() {
-		return this.adresse;
+		return adresse;
+	}
+
+	public String getEmail() {
+		return email;
 	}
 
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
 	public String getNom() {
-		return this.nom;
+		return nom;
 	}
 
 	public String getPrenom() {
-		return this.prenom;
+		return prenom;
+	}
+
+	public Boolean getSexe() {
+		return sexe;
 	}
 
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public void setId(int id) {
@@ -65,10 +83,14 @@ public class Personne {
 		this.prenom = prenom;
 	}
 
+	public void setSexe(Boolean sexe) {
+		this.sexe = sexe;
+	}
+
 	@Override
 	public String toString() {
-		return "Personne [id=" + this.id + ", nom=" + this.nom + ", prenom=" + this.prenom + ", adresse=" + this.adresse
-				+ "]";
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", sexe=" + sexe
+				+ ", email=" + email + "]";
 	}
 
 }
