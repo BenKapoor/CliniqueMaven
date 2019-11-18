@@ -11,7 +11,7 @@
   <modules>
     <module>CliniqueMavenDAO</module>
     <module>CliniqueMavenSERVICE</module>
-    <module>CliniqueServiceBO</module>
+    <module>CliniqueMavenBO</module>
     <module>CliniqueMavenPRESENTATION</module>
   </modules>
 </project>
