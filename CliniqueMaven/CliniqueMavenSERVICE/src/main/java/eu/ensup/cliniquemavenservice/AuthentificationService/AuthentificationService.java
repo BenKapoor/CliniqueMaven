@@ -5,17 +5,22 @@
  */
 package eu.ensup.cliniquemavenservice.AuthentificationService;
 
+import eu.ensup.cliniqueservicebo.Medecin;
+
 /**
  *
  * @author lorris
  */
 public class AuthentificationService {
     
-    public boolean identification(String identifiant, String password,MedecinBO bo)
+    public boolean identification(String identifiant, String password,Medecin bo)
     {
         boolean b = false; 
         
-        
+        if(identifiant.equalsIgnoreCase(bo.getEmail()) == true && password.equalsIgnoreCase(bo.getPassword()))
+        {
+           b = true;
+        }
         
         
         return b;

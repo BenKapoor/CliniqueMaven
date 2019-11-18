@@ -13,6 +13,7 @@ public class Personne {
 	private String adresse;
 	private Boolean sexe;
 	private String email;
+	private String password;
 
 	/**
 	 *
@@ -93,4 +94,13 @@ public class Personne {
 				+ ", email=" + email + "]";
 	}
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+        
 }
