@@ -3,6 +3,7 @@ package eu.ensup.cliniquemavenservice;
 import java.util.ArrayList;
 
 import eu.ensup.cliniquemavendao.IPatientDao;
+import eu.ensup.cliniqueservicebo.Medecin;
 import eu.ensup.cliniqueservicebo.Patient;
 
 public class PatientService {
