@@ -37,6 +37,12 @@
         </configuration>
       </plugin>
     </plugins>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
   </build>
   <modules>
     <module>CliniqueMavenDAO</module>

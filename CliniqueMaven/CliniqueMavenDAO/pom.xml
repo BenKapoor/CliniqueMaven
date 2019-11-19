@@ -33,6 +33,11 @@
 		<artifactId>CliniqueMavenBO</artifactId>
 		<version>1.0-SNAPSHOT</version>
     </dependency>
+    <dependency>
+		<groupId>eu.ensup</groupId>
+		<artifactId>CliniqueMavenService</artifactId>
+		<version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
