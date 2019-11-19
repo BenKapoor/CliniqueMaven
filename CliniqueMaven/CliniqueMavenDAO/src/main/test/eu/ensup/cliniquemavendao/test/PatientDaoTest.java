@@ -1,6 +1,6 @@
 package eu.ensup.cliniquemavendao.test;
 
-import org.graalvm.compiler.debug.Assertions;
+
 
 import eu.ensup.cliniquemavendao.IPatientDao;
 import eu.ensup.cliniquemavenservice.PatientService;
