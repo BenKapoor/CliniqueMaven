@@ -11,7 +11,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>AuthentificationServlet</servlet-name>
-    <url-pattern>/profil</url-pattern>
+    <url-pattern>/authentification</url-pattern>
   </servlet-mapping>
   
   <!-- 

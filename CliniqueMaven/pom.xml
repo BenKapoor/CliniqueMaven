@@ -26,7 +26,18 @@
 		    <scope>test</scope>
 		</dependency>
   </dependencies>
-  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.11.2</version>
+        <configuration>
+          <goals>install</goals>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   <modules>
     <module>CliniqueMavenDAO</module>
     <module>CliniqueMavenSERVICE</module>
