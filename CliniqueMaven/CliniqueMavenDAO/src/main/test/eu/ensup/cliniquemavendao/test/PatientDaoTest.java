@@ -5,6 +5,13 @@ import org.graalvm.compiler.debug.Assertions;
 import eu.ensup.cliniquemavendao.IPatientDao;
 import eu.ensup.cliniquemavenservice.PatientService;
 import eu.ensup.cliniqueservicebo.Patient;
+import junit.framework.TestCase;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 //@InjectMock
 public class PatientDaoTest extends TestCase {
@@ -38,6 +45,6 @@ public class PatientDaoTest extends TestCase {
 		Assertions.assertEquals(patient.getId(), 1);
 
 		// verifier l'appel et le nombre de fois
-		Mockito.verify(dao, Mockito.times(1)).getMedecinById(1);
+		Mockito.verify(dao, Mockito.times(1)).getPatientById(1);
 	}
 }
